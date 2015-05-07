@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicPlay.Repository", "MusicPlay.Repository\MusicPlay.Repository.csproj", "{1BE2911A-ADA5-43C8-88BF-A2ADA9E1ACFC}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BE2911A-ADA5-43C8-88BF-A2ADA9E1ACFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE2911A-ADA5-43C8-88BF-A2ADA9E1ACFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE2911A-ADA5-43C8-88BF-A2ADA9E1ACFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE2911A-ADA5-43C8-88BF-A2ADA9E1ACFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
