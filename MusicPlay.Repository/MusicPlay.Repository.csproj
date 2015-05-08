@@ -37,9 +37,14 @@
   <ItemGroup>
     <Compile Include="AcessoBanco\ConexaoBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ArtistasRepository.cs" />
+    <Compile Include="Repositories\MusicasRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\MusicPlay.Core\MusicPlay.Core.csproj">
+      <Project>{4F0E5655-36E7-4722-9C14-30CA3E60C609}</Project>
+      <Name>MusicPlay.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -34,10 +34,28 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AcessosMusica.cs" />
+    <Compile Include="Models\Albuns.cs" />
+    <Compile Include="Models\AlbunsFavoritosUsua.cs" />
+    <Compile Include="Models\Artistas.cs" />
+    <Compile Include="Models\ArtistasFavoritosUsua.cs" />
+    <Compile Include="Models\Bandas.cs" />
+    <Compile Include="Models\BandasFavoritasUsua.cs" />
+    <Compile Include="Models\BaseManut.cs" />
+    <Compile Include="Models\GenerosFavoritosUsua.cs" />
+    <Compile Include="Models\GenerosMusicais.cs" />
+    <Compile Include="Models\IntegrantesBanda.cs" />
+    <Compile Include="Models\Musicas.cs" />
+    <Compile Include="Models\MusicasFavoritasUsua.cs" />
+    <Compile Include="Models\MusicasPlaylist.cs" />
+    <Compile Include="Models\ParticipacaoEspArtistasMusica.cs" />
+    <Compile Include="Models\ParticipacaoEspBandasMusica.cs" />
+    <Compile Include="Models\PlayListsUsua.cs" />
+    <Compile Include="Models\TiposUsuario.cs" />
+    <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
