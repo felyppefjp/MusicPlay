@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MusicPlay.Core.Models
 {
@@ -10,5 +11,7 @@ namespace MusicPlay.Core.Models
         public DateTime Dat_IniFormacao { get; set; }
 
         public GenerosMusicais GenerosMusicais{ get; set; }
+
+        public List<Artistas> Integrantes { get; set; }
     }
 }

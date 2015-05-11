@@ -15,7 +15,7 @@ namespace MusicPlay.Repository.AcessoBanco
             OpenConnection();
         }
 
-        public void AdicionaParameteros(string nomeParametro, object valor)
+        public void AdicionaParametros(string nomeParametro, object valor)
         {
             SqlCommand.Parameters.AddWithValue(nomeParametro, valor);
         }

@@ -25,6 +25,12 @@ namespace MusicPlay.Repository.Repositories
                 cb.AdicionaParameteros("@Dat_UltAlt", musicas.Dat_Cad);
                 cb.AdicionaParameteros("@Num_Temo", musicas.Num_Tempo);
 
+                cb.AdicionaParametros("@Nom_Musica", musicas.Nom_Musica);
+                cb.AdicionaParametros("@Num_SeqlAlbum", musicas.Num_SeqlAlbum);
+                cb.AdicionaParametros("@Url_Video", musicas.Url_Video);
+                cb.AdicionaParametros("@Cod_UsuaCad", musicas.Cod_UsuaCad);
+                cb.AdicionaParametros("@Dat_Cad", musicas.Dat_Cad);
+                cb.AdicionaParametros("@Cod_UsuaAlt", musicas.Cod_UsuaCad);
                 cb.ExecuteNonQuery();
             }
         }
@@ -34,7 +40,6 @@ namespace MusicPlay.Repository.Repositories
             using (var cb = new ConexaoBase())
             {
                 cb.ExecutaProcedure(Procedures.Sp_DelMusica);
-                cb.AdicionaParameteros("@Num_SeqlMusica", i);
                 cb.ExecuteNonQuery();
             }
         }

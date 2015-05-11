@@ -41,6 +41,11 @@
     <Compile Include="Repositories\ArtistasRepository.cs" />
     <Compile Include="Repositories\BandasRepository.cs" />
     <Compile Include="Repositories\IntegrantesBandaRepository.cs" />
+    <Compile Include="Repositories\FavoritesRepositories\AlbunsFavRepository.cs" />
+    <Compile Include="Repositories\FavoritesRepositories\ArtistasFavRepository.cs" />
+    <Compile Include="Repositories\FavoritesRepositories\BandasFavRepository.cs" />
+    <Compile Include="Repositories\FavoritesRepositories\GenerosFavRepository.cs" />
+    <Compile Include="Repositories\FavoritesRepositories\MusicasFavRepository.cs" />
     <Compile Include="Repositories\MusicasRepository.cs" />
     <Compile Include="Repositories\ParticipacaoEspArtistasMusicaRepository.cs" />
     <Compile Include="Repositories\ParticipacaoEspBandasMusicaRepository.cs" />
