@@ -24,6 +24,7 @@ namespace MusicPlay.Repository.Repositories
                 cb.AdicionaParameteros("@Cod_UsuaAlt", musicas.Cod_UsuaCad);
                 cb.AdicionaParameteros("@Dat_UltAlt", musicas.Dat_Cad);
                 cb.AdicionaParameteros("@Num_Temo", musicas.Num_Tempo);
+
                 cb.ExecuteNonQuery();
             }
         }

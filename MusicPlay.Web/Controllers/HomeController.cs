@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
+using MusicPlay.Core.Models;
+using MusicPlay.Repository.Repositories;
 
 
 namespace MusicPlay.Web.Controllers
@@ -8,8 +11,29 @@ namespace MusicPlay.Web.Controllers
     {
         public ActionResult Index()
         {
-            // Hello gitHub (teste) Edmar Junior
-            return View();
+            try
+            {
+                var a = new Artistas
+                {
+                    Nom_Artista = "artista",
+                    Dat_IniCarreira = new DateTime(1992, 01, 01),
+                    Num_SeqlGenero = 1,
+                    Cod_UsuaCad = 1,
+                    Dat_Cad = new DateTime(2015, 01, 01)
+                };
+
+                var teste = new ArtistasRepository();
+                teste.PostArtista(a);
+
+
+                return View();
+            }
+            catch (Exception e)
+            {
+                throw e;
+                
+            }
+            
         }
 
         public ActionResult About()
@@ -25,5 +49,9 @@ namespace MusicPlay.Web.Controllers
 
             return View();
         }
+    }
+
+    public class Usuario
+    {
     }
 }

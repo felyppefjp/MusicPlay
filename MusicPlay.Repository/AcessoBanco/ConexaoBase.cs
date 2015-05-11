@@ -11,8 +11,8 @@ namespace MusicPlay.Repository.AcessoBanco
 
         public ConexaoBase()
         {
-            SqlConnection = new SqlConnection(@"data source=.; Integrated Security=SSPI;Initial Catalog=MusicPlay");
-            SqlConnection.Open();
+            SqlConnection = new SqlConnection("Server=192.168.7.12; Database=64Beats; User Id=sqlhomolog; password=1eng@ENG");
+            OpenConnection();
         }
 
         public void AdicionaParameteros(string nomeParametro, object valor)
@@ -27,6 +27,20 @@ namespace MusicPlay.Repository.AcessoBanco
                 CommandType = CommandType.StoredProcedure,
                 CommandTimeout = 99999
             };
+        }
+
+        protected SqlConnection OpenConnection()
+        {
+            if (SqlCommand.Connection.State == ConnectionState.Broken)
+            {
+                SqlCommand.Connection.Close();
+                SqlCommand.Connection.Open();
+            }
+
+            if (SqlCommand.Connection.State == ConnectionState.Closed)
+                SqlCommand.Connection.Open();
+
+            return SqlCommand.Connection;
         }
 
         public int ExecuteNonQuery()

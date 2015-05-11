@@ -16,6 +16,7 @@ namespace MusicPlay.Repository.Repositories
             using (var cb = new ConexaoBase())
             {
                 cb.ExecutaProcedure(Procedures.Sp_InsArtista);
+                cb.OpenConnection();
                 cb.AdicionaParameteros("@Nom_Artistas", artistas.Nom_Artista);
                 cb.AdicionaParameteros("@Dat_IniCarreira", artistas.Dat_IniCarreira);
                 cb.AdicionaParameteros("@Num_SeqlGenero", artistas.Num_SeqlGenero);

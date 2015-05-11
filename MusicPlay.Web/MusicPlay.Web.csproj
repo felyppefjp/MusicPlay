@@ -153,7 +153,16 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MusicPlay.Core\MusicPlay.Core.csproj">
+      <Project>{4F0E5655-36E7-4722-9C14-30CA3E60C609}</Project>
+      <Name>MusicPlay.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicPlay.Repository\MusicPlay.Repository.csproj">
+      <Project>{1BE2911A-ADA5-43C8-88BF-A2ADA9E1ACFC}</Project>
+      <Name>MusicPlay.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
