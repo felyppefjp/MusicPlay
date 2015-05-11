@@ -7,10 +7,31 @@ namespace MusicPlay.Repository.Repositories.FavoritesRepositories
 {
     public class GenerosFavRepository
     {
+        private readonly List<GenerosMusicais> generos;
         private enum Procedures
         {
             Sp_InsGenerosFavoritosUsua,
-            Sp_DelGenerosFavoritosUsua
+            Sp_DelGenerosFavoritosUsua,
+            Sp_SelGenerosFavoritosUsua
+        }
+
+        public List<GenerosMusicais> GetGenerosFavoritosUsua(int Cod_Usua)
+        {
+            using(var cb = new ConexaoBase())
+            {
+                cb.ExecutaProcedure(Procedures.Sp_SelGenerosFavoritosUsua);
+                cb.AdicionaParametros("@Cod_Usua", Cod_Usua);
+                var reader = cb.ExecuteReader();
+                while (reader.Read())
+                {
+                    generos.Add(new GenerosMusicais()
+                    {
+                        Num_SeqlGenero = (int)reader["Id"],
+                        Nom_Genero = reader["Genero"].ToString()
+                    });
+                }
+            }
+            return generos;
         }
 
         public void PostGenerosFavoritosUsua(int Cod_Usua, int Num_SeqlGeneros)

@@ -17,31 +17,6 @@ namespace MusicPlay.Repository.Repositories.FavoriteRepositories
             Sp_SelAlbunsFavoritosBandasUsua
         }
 
-        
-
-        public void PostAlbunsFavoritosUsua(int Cod_Usua, int Num_SeqlAlbum)
-        {
-            using (var cb = new ConexaoBase())
-            {
-                cb.ExecutaProcedure(Procedures.Sp_InsAlbunsFavoritosUsua);
-                cb.AdicionaParametros("@Cod_Usua", Cod_Usua);
-                cb.AdicionaParametros("@Num_SeqlAlbum", Num_SeqlAlbum);
-                cb.ExecuteNonQuery();
-            }
-        }
-
-        public void DeleteAlbunsFavoritosUsua(int Cod_Usua, int Num_SeqlAlbum)
-        {
-            using (var cb = new ConexaoBase())
-            {
-                cb.ExecutaProcedure(Procedures.Sp_DelAlbunsFavoritosUsua);
-                cb.AdicionaParametros("@Cod_Usua", Cod_Usua);
-                cb.AdicionaParametros("@Num_SeqlAlbum", Num_SeqlAlbum);
-                cb.ExecuteNonQuery();
-            }
-        }
-
-
         private List<Albuns> GetListaAlbunsBandas(int Cod_Usua)
         {
             using (var cb = new ConexaoBase())
@@ -104,13 +79,38 @@ namespace MusicPlay.Repository.Repositories.FavoriteRepositories
             return albuns;
         }
 
-        public List<Albuns> GetAlbunsFavoritosBandasUsua(int Cod_Usua)
+        public List<Albuns> GetAlbunsFavoritosUsua(int Cod_Usua)
         {
             GetListaAlbunsBandas(Cod_Usua);
             GetListaAlbunsArtistas(Cod_Usua);
             return albuns;
 
         }
+        
+        public void PostAlbunsFavoritosUsua(int Cod_Usua, int Num_SeqlAlbum)
+        {
+            using (var cb = new ConexaoBase())
+            {
+                cb.ExecutaProcedure(Procedures.Sp_InsAlbunsFavoritosUsua);
+                cb.AdicionaParametros("@Cod_Usua", Cod_Usua);
+                cb.AdicionaParametros("@Num_SeqlAlbum", Num_SeqlAlbum);
+                cb.ExecuteNonQuery();
+            }
+        }
+
+        public void DeleteAlbunsFavoritosUsua(int Cod_Usua, int Num_SeqlAlbum)
+        {
+            using (var cb = new ConexaoBase())
+            {
+                cb.ExecutaProcedure(Procedures.Sp_DelAlbunsFavoritosUsua);
+                cb.AdicionaParametros("@Cod_Usua", Cod_Usua);
+                cb.AdicionaParametros("@Num_SeqlAlbum", Num_SeqlAlbum);
+                cb.ExecuteNonQuery();
+            }
+        }
+
+
+        
 
     }
 }

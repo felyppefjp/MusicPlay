@@ -7,10 +7,33 @@ namespace MusicPlay.Repository.Repositories.FavoritesRepositories
 {
     public class MusicasFavRepository
     {
+        private readonly List<Musicas> musicas;
+
         private enum Procedures
         {
             Sp_InsMusicasFavoritosUsua,
-            Sp_DelMusicasFavoritosUsua
+            Sp_DelMusicasFavoritosUsua,
+            Sp_SelMusicasFavoritasUsua
+        }
+
+        public List<Musicas> GetMusicasFavoritasUsua(int Cod_Usua) 
+        {
+            using(var cb = new ConexaoBase())
+            {
+                cb.ExecutaProcedure(Procedures.Sp_SelMusicasFavoritasUsua);
+                cb.AdicionaParametros("@Cod_Usua", Cod_Usua);
+                var reader = cb.ExecuteReader();
+                while(reader.Read())
+                musicas.Add(new Musicas()
+                {
+                    Num_SeqlMusica = (int)reader["Id"],
+                    Nom_Musica = reader["Musica"].ToString(),
+                    Url_Video = reader["Video"].ToString(),
+                    Num_Tempo = (TimeSpan)reader["Duracao"]
+                });
+            }
+            
+            return musicas;
         }
 
         public void PostMusicasFavoritosUsua(int Cod_Usua, int Num_SeqlMusica)
