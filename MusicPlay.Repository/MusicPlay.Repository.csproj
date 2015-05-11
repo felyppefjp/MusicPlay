@@ -49,6 +49,7 @@
     <Compile Include="Repositories\MusicasRepository.cs" />
     <Compile Include="Repositories\ParticipacaoEspArtistasMusicaRepository.cs" />
     <Compile Include="Repositories\ParticipacaoEspBandasMusicaRepository.cs" />
+    <Compile Include="Repositories\PlaylistRepositories\PlayListUsuaRepositories.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MusicPlay.Core\MusicPlay.Core.csproj">

@@ -13,7 +13,6 @@
  *
  * NUGET: END LICENSE TEXT */
 intellisense.annotate(jQuery, {
-﻿intellisense.annotate(jQuery, {
   'ajax': function() {
     /// <signature>
     ///   <summary>Perform an asynchronous HTTP (Ajax) request.</summary>
