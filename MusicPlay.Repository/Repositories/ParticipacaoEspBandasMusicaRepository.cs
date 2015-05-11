@@ -15,8 +15,8 @@ namespace MusicPlay.Repository.Repositories
             using (var cb = new ConexaoBase())
             {
                 cb.ExecutaProcedure(Procedures.Sp_InsParticipacaoEspBandaMusica);
-                cb.AdicionaParameteros("@Num_SeqlBanda", participacaoEspBandasMusica.Num_SeqlBanda);
-                cb.AdicionaParameteros("@Num_SeqlMusica", participacaoEspBandasMusica.Num_SeqlMusica);
+                cb.AdicionaParametros("@Num_SeqlBanda", participacaoEspBandasMusica.Num_SeqlBanda);
+                cb.AdicionaParametros("@Num_SeqlMusica", participacaoEspBandasMusica.Num_SeqlMusica);
                 cb.ExecuteNonQuery();
             }
         }

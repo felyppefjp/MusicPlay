@@ -16,9 +16,9 @@ namespace MusicPlay.Repository.Repositories
             using (var cb = new ConexaoBase())
             {
                 cb.ExecutaProcedure(Procedures.Sp_InsIntegranteBanda);
-                cb.AdicionaParameteros("@Num_SeqlArtista", integrantesBanda.Num_SeqlArtista);
-                cb.AdicionaParameteros("@Dat_Ini", integrantesBanda.Dat_Ini);
-                cb.AdicionaParameteros("@Dat_Fim", integrantesBanda.Dat_Fim);
+                cb.AdicionaParametros("@Num_SeqlArtista", integrantesBanda.Num_SeqlArtista);
+                cb.AdicionaParametros("@Dat_Ini", integrantesBanda.Dat_Ini);
+                cb.AdicionaParametros("@Dat_Fim", integrantesBanda.Dat_Fim);
                 cb.ExecuteNonQuery();
             }
         }
@@ -28,7 +28,7 @@ namespace MusicPlay.Repository.Repositories
             using (var cb = new ConexaoBase())
             {
                 cb.ExecutaProcedure(Procedures.Sp_DelIntegranteBanda);
-                cb.AdicionaParameteros("@Num_SeqlBanda", id);
+                cb.AdicionaParametros("@Num_SeqlBanda", id);
                 cb.ExecuteNonQuery();
             }
         }

@@ -16,15 +16,6 @@ namespace MusicPlay.Repository.Repositories
             using (var cb = new ConexaoBase())
             {
                 cb.ExecutaProcedure(Procedures.Sp_InsMusicasa);
-                cb.AdicionaParameteros("@Nom_Musica", musicas.Nom_Musica);
-                cb.AdicionaParameteros("@Num_SeqlAlbum", musicas.Num_SeqlAlbum);
-                cb.AdicionaParameteros("@Url_Video", musicas.Url_Video);
-                cb.AdicionaParameteros("@Cod_UsuaCad", musicas.Cod_UsuaCad);
-                cb.AdicionaParameteros("@Dat_Cad", musicas.Dat_Cad);
-                cb.AdicionaParameteros("@Cod_UsuaAlt", musicas.Cod_UsuaCad);
-                cb.AdicionaParameteros("@Dat_UltAlt", musicas.Dat_Cad);
-                cb.AdicionaParameteros("@Num_Temo", musicas.Num_Tempo);
-
                 cb.AdicionaParametros("@Nom_Musica", musicas.Nom_Musica);
                 cb.AdicionaParametros("@Num_SeqlAlbum", musicas.Num_SeqlAlbum);
                 cb.AdicionaParametros("@Url_Video", musicas.Url_Video);

@@ -16,13 +16,13 @@ namespace MusicPlay.Repository.Repositories
             using (var cb = new ConexaoBase())
             {
                 cb.ExecutaProcedure(Procedures.Sp_InsBandas);
-                cb.AdicionaParameteros("@Nom_Banda", bandas.Nom_Banda);
-                cb.AdicionaParameteros("@Num_SeqlGenero", bandas.Num_SeqlGenero);
-                cb.AdicionaParameteros("@Data_IniFormacao", bandas.Dat_IniFormacao);
-                cb.AdicionaParameteros("@Cod_UsuaCad", bandas.Cod_UsuaCad);
-                cb.AdicionaParameteros("@Dat_Cad", bandas.Dat_Cad);
-                cb.AdicionaParameteros("@Cod_UsuaAlt", bandas.Cod_UsuaAlt);
-                cb.AdicionaParameteros("@Dat_UltAlt", bandas.Dat_UsuaAlt);
+                cb.AdicionaParametros("@Nom_Banda", bandas.Nom_Banda);
+                cb.AdicionaParametros("@Num_SeqlGenero", bandas.Num_SeqlGenero);
+                cb.AdicionaParametros("@Data_IniFormacao", bandas.Dat_IniFormacao);
+                cb.AdicionaParametros("@Cod_UsuaCad", bandas.Cod_UsuaCad);
+                cb.AdicionaParametros("@Dat_Cad", bandas.Dat_Cad);
+                cb.AdicionaParametros("@Cod_UsuaAlt", bandas.Cod_UsuaAlt);
+                cb.AdicionaParametros("@Dat_UltAlt", bandas.Dat_UsuaAlt);
                 cb.ExecuteNonQuery();
             }
         }
@@ -32,7 +32,7 @@ namespace MusicPlay.Repository.Repositories
             using (var cb = new ConexaoBase())
             {
                 cb.ExecutaProcedure(Procedures.Sp_DelBandas);
-                cb.AdicionaParameteros("@Num_SeqlBanda", id);
+                cb.AdicionaParametros("@Num_SeqlBanda", id);
                 cb.ExecuteNonQuery();
             }
         }

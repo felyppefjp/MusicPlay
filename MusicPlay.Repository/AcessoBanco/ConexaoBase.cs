@@ -12,7 +12,6 @@ namespace MusicPlay.Repository.AcessoBanco
         public ConexaoBase()
         {
             SqlConnection = new SqlConnection("Server=192.168.7.12; Database=64Beats; User Id=sqlhomolog; password=1eng@ENG");
-            OpenConnection();
         }
 
         public void AdicionaParametros(string nomeParametro, object valor)
@@ -27,6 +26,8 @@ namespace MusicPlay.Repository.AcessoBanco
                 CommandType = CommandType.StoredProcedure,
                 CommandTimeout = 99999
             };
+
+            OpenConnection();
         }
 
         protected SqlConnection OpenConnection()
